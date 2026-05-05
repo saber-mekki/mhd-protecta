@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>MHD Protecta – Sécurité Incendie & Surveillance en Tunisie</title>
+<meta name="description" content="MHD Protecta, expert en sécurité incendie, vidéosurveillance et contrôle d'accès en Tunisie."/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 54 60'%3E%3Cpath d='M27 2 L52 13 L52 36 C52 50 27 58 27 58 C27 58 2 50 2 36 L2 13 Z' fill='%23C8102E'/%3E%3Cpath d='M27 8 L47 18 L47 36 C47 47 27 54 27 54 C27 54 7 47 7 36 L7 18 Z' fill='%23E8314E'/%3E%3Cpath d='M12 46 L12 22 L27 36 L42 22 L42 46' fill='none' stroke='white' stroke-width='4.5' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--red:#C8102E;--red-dark:#9B0D22;--red-light:#E8314E;--navy:#0B1F3A;--navy-mid:#132B50;--navy-light:#1A3A6B;--white:#FFF;--off-white:#F4F6F9;--gray:#8A9BB0;--gray-light:#E8EDF4;--text:#1A2740;--gold:#C9A227;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Barlow',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+[lang="ar"] body,[dir="rtl"] body{font-family:'Cairo',sans-serif;}
+html[dir="rtl"]{direction:rtl;}
+html[dir="rtl"] body{font-family:'Cairo',sans-serif;}
+
+/* ─── LANG SWITCHER (inline in nav) ─── */
+.lang-switcher{display:flex;align-items:center;gap:4px;margin-inline-start:16px;border-inline-start:1px solid rgba(255,255,255,.15);padding-inline-start:16px;}
+.lang-btn{background:transparent;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.55);font-size:.68rem;font-weight:700;letter-spacing:.5px;padding:4px 10px;border-radius:3px;cursor:pointer;transition:all .2s;text-transform:uppercase;line-height:1.4;}
+.lang-btn:hover{border-color:rgba(255,255,255,.55);color:white;}
+.lang-btn.active{background:var(--red);border-color:var(--red);color:white;}
+
+/* ─── NAVBAR ─── */
+#navbar{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(11,31,58,.97);backdrop-filter:blur(12px);border-bottom:2px solid var(--red);transition:box-shadow .3s;}
+.nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:72px;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-name{font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:800;letter-spacing:1px;line-height:1;color:white;}
+html[dir="rtl"] .logo-name{font-family:'Cairo',sans-serif;letter-spacing:0;}
+.logo-sub{font-size:.6rem;font-weight:300;letter-spacing:2px;color:var(--gray);text-transform:uppercase;}
+html[dir="rtl"] .logo-sub{letter-spacing:0;font-size:.68rem;}
+.nav-right{display:flex;align-items:center;}
+nav{display:flex;align-items:center;gap:0;}
+nav a{color:rgba(255,255,255,.78);text-decoration:none;font-size:.8rem;font-weight:500;letter-spacing:.4px;padding:7px 13px;border-radius:4px;transition:all .2s;text-transform:uppercase;white-space:nowrap;}
+html[dir="rtl"] nav a{letter-spacing:0;font-size:.86rem;}
+nav a:hover{color:white;background:rgba(255,255,255,.08);}
+.nav-cta{background:var(--red)!important;color:white!important;padding:8px 16px!important;border-radius:4px!important;margin-inline-start:8px;font-weight:600!important;}
+.nav-cta:hover{background:var(--red-light)!important;}
+.hamburger{display:none;cursor:pointer;color:white;background:none;border:none;padding:4px;margin-inline-start:12px;}
+.mobile-nav{display:none;flex-direction:column;background:var(--navy);border-top:1px solid rgba(255,255,255,.1);padding:1rem 2rem;}
+.mobile-nav a{color:rgba(255,255,255,.85);text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:.95rem;font-weight:500;}
+.mobile-nav-langs{display:flex;gap:8px;padding:12px 0;}
+.mobile-nav.open{display:flex;}
+
+/* ─── HERO ─── */
+#hero{min-height:100vh;background:linear-gradient(135deg,rgba(11,31,58,.95) 0%,rgba(11,31,58,.82) 50%,rgba(155,13,34,.75) 100%),url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=80') center/cover no-repeat;display:flex;align-items:center;padding-top:72px;position:relative;overflow:hidden;}
+.hero-svg-bg{position:absolute;inset:0;width:100%;height:100%;opacity:.05;pointer-events:none;}
+.hero-svg-art{position:absolute;right:5%;top:50%;transform:translateY(-50%);width:400px;height:400px;opacity:.1;pointer-events:none;}
+html[dir="rtl"] .hero-svg-art{right:auto;left:5%;}
+.hero-content{max-width:1280px;margin:0 auto;padding:0 2rem;position:relative;z-index:1;animation:fadeUp .9s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(200,16,46,.2);border:1px solid rgba(200,16,46,.4);color:#FF8A9A;font-size:.72rem;font-weight:600;letter-spacing:2px;padding:6px 14px;border-radius:2px;text-transform:uppercase;margin-bottom:1.5rem;}
+html[dir="rtl"] .hero-badge{letter-spacing:0;}
+.hero-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.8rem,7vw,5.2rem);font-weight:800;color:white;line-height:.95;text-transform:uppercase;margin-bottom:.5rem;}
+html[dir="rtl"] .hero-title{font-family:'Cairo',sans-serif;line-height:1.1;text-transform:none;}
+.hero-title .accent{color:var(--red-light);display:block;}
+.hero-sub{font-size:clamp(.95rem,2vw,1.15rem);color:rgba(255,255,255,.7);font-weight:300;margin-bottom:2.5rem;max-width:560px;line-height:1.6;}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;}
+.btn-primary{background:var(--red);color:white;padding:15px 32px;font-size:.88rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border-radius:3px;transition:all .25s;border:2px solid var(--red);display:inline-flex;align-items:center;gap:8px;}
+html[dir="rtl"] .btn-primary{letter-spacing:0;}
+.btn-primary:hover{background:var(--red-light);border-color:var(--red-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,16,46,.4);}
+.btn-outline{background:transparent;color:white;padding:13px 32px;font-size:.88rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border-radius:3px;border:2px solid rgba(255,255,255,.4);transition:all .25s;display:inline-flex;align-items:center;gap:8px;}
+.btn-outline:hover{border-color:white;background:rgba(255,255,255,.08);transform:translateY(-2px);}
+.hero-stats{display:flex;margin-top:3.5rem;border-top:1px solid rgba(255,255,255,.12);padding-top:2rem;}
+.stat{flex:1;padding-inline-end:2rem;border-inline-end:1px solid rgba(255,255,255,.1);margin-inline-end:2rem;}
+.stat:last-child{border-inline-end:none;margin-inline-end:0;}
+.stat-num{font-family:'Barlow Condensed',sans-serif;font-size:2.4rem;font-weight:800;color:var(--red-light);line-height:1;}
+.stat-label{font-size:.78rem;color:rgba(255,255,255,.55);margin-top:4px;}
+
+/* ─── SECTIONS ─── */
+section{padding:88px 2rem;}
+.container{max-width:1280px;margin:0 auto;}
+.section-tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--red);border-inline-start:3px solid var(--red);padding-inline-start:10px;margin-bottom:1rem;}
+html[dir="rtl"] .section-tag{letter-spacing:0;font-size:.8rem;}
+.section-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;color:var(--navy);text-transform:uppercase;line-height:1.1;margin-bottom:1rem;}
+html[dir="rtl"] .section-title{font-family:'Cairo',sans-serif;text-transform:none;line-height:1.3;}
+.section-desc{font-size:.98rem;color:#5A6B80;line-height:1.75;max-width:620px;}
+
+/* ─── CERTIF STRIP ─── */
+.certif-strip{background:var(--gray-light);padding:18px 2rem;}
+.certif-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap;}
+.certif-item{display:flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;color:#5A6B80;}
+
+/* ─── INTRO STRIP ─── */
+#intro{background:var(--navy);padding:56px 2rem;}
+.intro-grid{display:grid;grid-template-columns:1fr 1px 1fr 1px 1fr;align-items:center;}
+.intro-divider{background:rgba(255,255,255,.12);height:80px;}
+.intro-item{padding:0 2rem;display:flex;align-items:flex-start;gap:14px;}
+.intro-icon{width:48px;height:48px;flex-shrink:0;background:rgba(200,16,46,.15);border:1px solid rgba(200,16,46,.3);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--red-light);}
+.intro-item h4{color:white;font-size:.92rem;font-weight:600;margin-bottom:4px;}
+.intro-item p{color:rgba(255,255,255,.5);font-size:.8rem;line-height:1.5;}
+
+/* ─── ABOUT ─── */
+#apropos{background:var(--white);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.about-img{position:relative;}
+.about-img-card{position:absolute;bottom:-20px;right:-20px;background:var(--red);color:white;padding:22px 26px;border-radius:4px;text-align:center;}
+html[dir="rtl"] .about-img-card{right:auto;left:-20px;}
+.about-img-card .big{font-family:'Barlow Condensed',sans-serif;font-size:2.4rem;font-weight:800;line-height:1;}
+.about-img-card .sm{font-size:.72rem;opacity:.85;}
+.about-badge{position:absolute;top:-14px;left:-14px;background:var(--navy);color:white;padding:12px 16px;border-radius:4px;font-size:.72rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;display:flex;align-items:center;gap:8px;}
+html[dir="rtl"] .about-badge{left:auto;right:-14px;letter-spacing:0;}
+.about-badge svg{color:var(--gold);}
+.values-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:1.5rem;}
+.value-item{display:flex;align-items:center;gap:10px;background:var(--off-white);padding:11px 14px;border-radius:4px;border-inline-start:3px solid var(--red);}
+.value-item svg{color:var(--red);flex-shrink:0;}
+.value-item span{font-size:.83rem;font-weight:500;}
+
+/* ─── SERVICES ─── */
+#services{background:var(--off-white);}
+.services-intro{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;gap:2rem;}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;}
+.service-card{background:white;padding:2.2rem;position:relative;overflow:hidden;transition:all .3s;}
+.service-card::before{content:'';position:absolute;bottom:0;inset-inline-start:0;width:0;height:3px;background:var(--red);transition:width .4s;}
+.service-card:hover::before{width:100%;}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(11,31,58,.1);z-index:1;}
+.service-card.featured{background:var(--navy);grid-column:span 2;}
+.service-head{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.4rem;}
+.service-icon{width:54px;height:54px;flex-shrink:0;border-radius:8px;display:flex;align-items:center;justify-content:center;}
+.service-card:not(.featured) .service-icon{background:rgba(200,16,46,.08);color:var(--red);}
+.service-card.featured .service-icon{background:rgba(200,16,46,.2);color:var(--red-light);}
+.service-card h3{font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:700;text-transform:uppercase;}
+html[dir="rtl"] .service-card h3{font-family:'Cairo',sans-serif;text-transform:none;}
+.service-card:not(.featured) h3{color:var(--navy);}
+.service-card.featured h3{color:white;}
+.badge-featured{display:inline-block;background:var(--red);color:white;font-size:.62rem;font-weight:700;letter-spacing:1.5px;padding:3px 8px;border-radius:2px;text-transform:uppercase;margin-top:4px;}
+html[dir="rtl"] .badge-featured{letter-spacing:0;}
+.service-card:not(.featured) p{color:#5A6B80;font-size:.88rem;line-height:1.7;margin-bottom:1.2rem;}
+.service-card.featured p{color:rgba(255,255,255,.65);font-size:.88rem;line-height:1.7;margin-bottom:1.4rem;}
+.service-list{list-style:none;}
+.service-list li{display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:.86rem;border-bottom:1px solid rgba(0,0,0,.05);}
+.service-list li:last-child{border-bottom:none;}
+.service-card:not(.featured) .service-list li{color:var(--text);}
+.service-card.featured .service-list li{color:rgba(255,255,255,.78);border-bottom-color:rgba(255,255,255,.07);}
+.service-list li svg{color:var(--red-light);margin-top:3px;flex-shrink:0;}
+.featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;}
+.featured-left .section-tag{color:var(--red-light);}
+.featured-left .section-title{color:white;}
+
+/* ─── RÉALISATIONS ─── */
+#realisations{background:white;}
+.real-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:2.5rem;}
+.real-card{border-radius:4px;overflow:hidden;box-shadow:0 4px 20px rgba(11,31,58,.08);transition:all .3s;}
+.real-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(11,31,58,.15);}
+.real-img{position:relative;aspect-ratio:16/10;overflow:hidden;}
+.real-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;}
+.real-card:hover .real-img img{transform:scale(1.06);}
+.real-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,31,58,.85) 0%,transparent 60%);display:flex;align-items:flex-end;padding:1rem;}
+.real-cat{background:var(--red);color:white;font-size:.65rem;font-weight:700;letter-spacing:1.5px;padding:4px 10px;border-radius:2px;text-transform:uppercase;}
+html[dir="rtl"] .real-cat{letter-spacing:0;}
+.real-body{padding:1.2rem;}
+.real-body h4{font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;color:var(--navy);text-transform:uppercase;margin-bottom:.4rem;}
+html[dir="rtl"] .real-body h4{font-family:'Cairo',sans-serif;text-transform:none;}
+.real-body p{font-size:.82rem;color:#5A6B80;line-height:1.6;}
+.real-meta{display:flex;gap:12px;margin-top:.7rem;font-size:.74rem;color:#8A9BB0;}
+.real-meta span{display:flex;align-items:center;gap:5px;}
+
+/* ─── CTA BANNER ─── */
+#cta-banner{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 50%,var(--red-dark) 100%);padding:65px 2rem;text-align:center;position:relative;overflow:hidden;}
+#cta-banner::before{content:'';position:absolute;top:-50%;left:-10%;width:60%;height:200%;background:rgba(255,255,255,.03);transform:rotate(-15deg);pointer-events:none;}
+#cta-banner h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:800;color:white;text-transform:uppercase;margin-bottom:1rem;}
+html[dir="rtl"] #cta-banner h2{font-family:'Cairo',sans-serif;text-transform:none;}
+#cta-banner p{color:rgba(255,255,255,.65);max-width:560px;margin:0 auto 2rem;line-height:1.7;}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2;}
+#cta-banner h2,#cta-banner p{position:relative;z-index:2;}
+
+/* ─── CONTACT ─── */
+#contact{background:var(--off-white);}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:56px;align-items:start;margin-top:2.5rem;}
+.contact-info h3{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:700;color:var(--navy);text-transform:uppercase;margin-bottom:1.4rem;}
+html[dir="rtl"] .contact-info h3{font-family:'Cairo',sans-serif;text-transform:none;}
+.contact-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:1.3rem;}
+.contact-icon{width:42px;height:42px;flex-shrink:0;background:var(--navy);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--red-light);}
+.contact-item h5{font-size:.75rem;font-weight:600;color:var(--gray);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;}
+html[dir="rtl"] .contact-item h5{letter-spacing:0;}
+.contact-item p{font-size:.9rem;color:var(--navy);font-weight:500;}
+.contact-item a{color:var(--navy);text-decoration:none;}
+.contact-item a:hover{color:var(--red);}
+.map-embed{margin-top:1.4rem;border-radius:6px;overflow:hidden;border:2px solid var(--gray-light);}
+.contact-form{background:white;padding:2.2rem;border-radius:4px;box-shadow:0 8px 40px rgba(11,31,58,.08);}
+.contact-form h3{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:700;color:var(--navy);text-transform:uppercase;margin-bottom:1.4rem;}
+html[dir="rtl"] .contact-form h3{font-family:'Cairo',sans-serif;text-transform:none;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.form-group{margin-bottom:14px;}
+.form-group label{display:block;font-size:.76rem;font-weight:600;color:var(--navy);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px;}
+html[dir="rtl"] .form-group label{letter-spacing:0;font-size:.82rem;}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:11px 14px;border:2px solid var(--gray-light);border-radius:3px;font-family:'Barlow',sans-serif;font-size:.88rem;color:var(--text);transition:border-color .2s;outline:none;background:white;}
+html[dir="rtl"] .form-group input,html[dir="rtl"] .form-group textarea,html[dir="rtl"] .form-group select{font-family:'Cairo',sans-serif;}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--navy);}
+.form-group textarea{resize:vertical;min-height:105px;}
+.form-submit{width:100%;padding:15px;background:var(--red);color:white;border:none;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .25s;display:flex;align-items:center;justify-content:center;gap:10px;}
+html[dir="rtl"] .form-submit{font-family:'Cairo',sans-serif;letter-spacing:0;}
+.form-submit:hover{background:var(--red-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,16,46,.3);}
+
+/* ─── FOOTER ─── */
+footer{background:var(--navy);border-top:3px solid var(--red);padding:56px 2rem 0;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:2.5rem;padding-bottom:2.5rem;}
+.footer-brand p{font-size:.83rem;line-height:1.7;margin:1rem 0;color:rgba(255,255,255,.5);}
+.footer-social{display:flex;gap:8px;margin-top:1rem;}
+.footer-social a{width:34px;height:34px;background:rgba(255,255,255,.08);border-radius:4px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);text-decoration:none;transition:all .2s;}
+.footer-social a:hover{background:var(--red);color:white;}
+.footer-col h5{font-family:'Barlow Condensed',sans-serif;font-size:.88rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:white;margin-bottom:.9rem;padding-bottom:7px;border-bottom:1px solid rgba(255,255,255,.1);}
+html[dir="rtl"] .footer-col h5{font-family:'Cairo',sans-serif;letter-spacing:0;}
+.footer-col ul{list-style:none;}
+.footer-col ul li{margin-bottom:7px;}
+.footer-col ul li a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.83rem;transition:color .2s;display:flex;align-items:center;gap:6px;}
+.footer-col ul li a:hover{color:var(--red-light);}
+.footer-contact-item{display:flex;gap:10px;margin-bottom:9px;font-size:.82rem;color:rgba(255,255,255,.55);}
+.footer-contact-item svg{color:var(--red-light);margin-top:2px;flex-shrink:0;}
+.footer-contact-item a{color:rgba(255,255,255,.55);text-decoration:none;}
+.footer-contact-item a:hover{color:white;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:18px 0;display:flex;justify-content:space-between;align-items:center;font-size:.76rem;color:rgba(255,255,255,.3);}
+
+/* ─── FADE ─── */
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;}
+.fade-in.visible{opacity:1;transform:translateY(0);}
+
+@media(max-width:1024px){
+  .intro-grid{grid-template-columns:1fr;gap:1rem;}
+  .intro-divider{display:none;}
+  .intro-item{padding:1rem 0;}
+  .about-grid{grid-template-columns:1fr;gap:56px;}
+  .about-img-card{bottom:0;right:0;}
+  html[dir="rtl"] .about-img-card{left:0;right:auto;}
+  .about-badge{top:0;left:0;}
+  html[dir="rtl"] .about-badge{right:0;left:auto;}
+  .featured-grid{grid-template-columns:1fr;}
+  .real-grid{grid-template-columns:1fr 1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  .services-intro{flex-direction:column;gap:1rem;}
+  /* Hide nav links but keep lang switcher */
+  nav#mainNav{display:none;}
+  .hamburger{display:flex;}
+  .lang-switcher{border-inline-start:none;padding-inline-start:0;margin-inline-start:8px;}
+}
+@media(max-width:768px){
+  section{padding:48px 1.2rem;}
+  #hero{padding-top:72px;}
+  .services-grid{grid-template-columns:1fr;}
+  .service-card.featured{grid-column:span 1;}
+  .real-grid{grid-template-columns:1fr;}
+  .hero-stats{flex-direction:column;gap:0;}
+  .stat{border-inline-end:none;border-bottom:1px solid rgba(255,255,255,.12);padding:1rem 0;margin-inline-end:0;padding-inline-end:0;}
+  .stat:last-child{border-bottom:none;}
+  .form-row{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;gap:1.5rem;}
+  .footer-bottom{flex-direction:column;gap:8px;text-align:center;}
+  .certif-inner{gap:1rem;}
+  .contact-form{padding:1.4rem;}
+  .cta-btns{flex-direction:column;align-items:center;}
+  .hero-btns{flex-direction:column;gap:10px;}
+  .hero-btns a{text-align:center;justify-content:center;}
+  .lang-switcher{display:none;}
+  .nav-inner{padding:0 1rem;}
+}
+@media(max-width:480px){
+  section{padding:36px 1rem;}
+  .values-grid{grid-template-columns:1fr;}
+  .certif-inner{flex-direction:column;gap:.7rem;align-items:flex-start;}
+  html[dir="rtl"] .certif-inner{align-items:flex-end;}
+  .real-grid{gap:12px;}
+}
+
+/* ─── FILE UPLOAD ─── */
+.file-upload-zone{border:2px dashed var(--gray-light);border-radius:4px;padding:18px;text-align:center;cursor:pointer;transition:all .2s;background:#fafbfc;position:relative;overflow:hidden;}
+.file-upload-zone:hover,.file-upload-zone.dragover{border-color:var(--navy);background:#f0f4f8;}
+.file-upload-zone input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
+.file-upload-icon{color:var(--gray);margin-bottom:6px;}
+.file-upload-text{font-size:.8rem;color:#5A6B80;font-weight:500;}
+.file-upload-hint{font-size:.7rem;color:var(--gray);margin-top:3px;}
+.file-preview{display:none;margin-top:10px;padding:10px 12px;background:rgba(11,31,58,.05);border-radius:4px;align-items:center;gap:10px;border:1px solid var(--gray-light);}
+.file-preview.show{display:flex;}
+.file-preview-name{font-size:.82rem;color:var(--navy);font-weight:600;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.file-preview-size{font-size:.72rem;color:var(--gray);white-space:nowrap;}
+.file-preview-remove{background:none;border:none;cursor:pointer;color:var(--red);padding:2px;display:flex;align-items:center;flex-shrink:0;}
+
+/* ─── TOAST NOTIFICATION ─── */
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(100px);background:var(--navy);color:white;padding:14px 28px;border-radius:6px;font-size:.9rem;font-weight:500;box-shadow:0 8px 32px rgba(11,31,58,.35);z-index:9999;transition:transform .4s cubic-bezier(.34,1.56,.64,1),opacity .3s;opacity:0;display:flex;align-items:center;gap:10px;max-width:90vw;text-align:center;}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1;}
+.toast.success{border-inline-start:4px solid #22c55e;}
+.toast.error{border-inline-start:4px solid var(--red);}
+
+/* ─── SVG ICON HELPERS ─── */
+.ico{display:inline-flex;align-items:center;vertical-align:middle;}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR (lang switcher integrated) -->
+<header id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="logo" style="gap:14px;">
+      <!-- CONCEPT 3 LOGO MARK -->
+      <svg width="52" height="58" viewBox="0 0 54 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Shield flat design -->
+        <path d="M27 2 L52 13 L52 36 C52 50 27 58 27 58 C27 58 2 50 2 36 L2 13 Z" fill="#C8102E"/>
+        <path d="M27 8 L47 18 L47 36 C47 47 27 54 27 54 C27 54 7 47 7 36 L7 18 Z" fill="#E8314E"/>
+        <!-- White M lettermark -->
+        <path d="M12 46 L12 22 L27 36 L42 22 L42 46" fill="none" stroke="white" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <!-- Bottom red accent line -->
+        <line x1="12" y1="46" x2="42" y2="46" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+        <!-- MHD micro text -->
+        <text x="27" y="51" text-anchor="middle" font-family="Arial" font-size="7" font-weight="900" fill="white" letter-spacing="2" opacity="0.9">MHD</text>
+      </svg>
+      <div class="logo-text">
+        <div class="logo-name" style="font-size:1.35rem;letter-spacing:1.5px;text-transform:uppercase;">PROTECTA</div>
+        <div class="logo-sub" data-i18n="logoSub">Sécurité & Protection</div>
+      </div>
+    </a>
+    <div class="nav-right">
+      <nav id="mainNav">
+        <a href="#apropos" data-i18n="navAbout">À propos</a>
+        <a href="#services" data-i18n="navServices">Services</a>
+        <a href="#realisations" data-i18n="navReal">Réalisations</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+        <a href="#contact" class="nav-cta" data-i18n="navQuote">Devis gratuit</a>
+      </nav>
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('ar')">ع</button>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-langs">
+      <button class="lang-btn active" onclick="setLang('fr');toggleMenu()">FR</button>
+      <button class="lang-btn" onclick="setLang('en');toggleMenu()">EN</button>
+      <button class="lang-btn" onclick="setLang('ar');toggleMenu()">ع</button>
+    </div>
+    <a href="#apropos" onclick="toggleMenu()" data-i18n="navAbout">À propos</a>
+    <a href="#services" onclick="toggleMenu()" data-i18n="navServices">Services</a>
+    <a href="#realisations" onclick="toggleMenu()" data-i18n="navReal">Réalisations</a>
+    <a href="#contact" onclick="toggleMenu()" data-i18n="navContact">Contact</a>
+    <a href="#contact" onclick="toggleMenu()" style="color:var(--red-light)!important;font-weight:700;" data-i18n="navQuoteMobile">➤ Demander un devis</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <svg class="hero-svg-bg" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(#grid)"/></svg>
+  <svg class="hero-svg-art" viewBox="0 0 300 350" fill="none">
+    <path d="M150 10L270 60L270 180C270 260 150 340 150 340C150 340 30 260 30 180L30 60Z" fill="white"/>
+    <path d="M150 80C110 130 100 160 115 210C128 248 150 270 150 270C150 270 172 248 185 210C200 160 190 130 150 80Z" fill="white"/>
+    <path d="M150 140C135 165 130 180 138 205C144 222 150 232 150 232C150 232 156 222 162 205C170 180 165 165 150 140Z" fill="white"/>
+  </svg>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+      <span data-i18n="heroBadge">Certifié & Agréé en Tunisie</span>
+    </div>
+    <h1 class="hero-title"><span data-i18n="heroTitle1">Votre sécurité,</span><span class="accent" data-i18n="heroTitle2">notre priorité.</span></h1>
+    <p class="hero-sub" data-i18n="heroSub">Solutions professionnelles en sécurité incendie, vidéosurveillance et contrôle d'accès — pour entreprises, industries et institutions en Tunisie.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <span data-i18n="heroCta1">Demander un devis</span>
+      </a>
+      <a href="#services" class="btn-outline">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+        <span data-i18n="heroCta2">Nos services</span>
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">+50</div><div class="stat-label" data-i18n="stat1">Projets réalisés</div></div>
+      <div class="stat"><div class="stat-num">10+</div><div class="stat-label" data-i18n="stat2">Années d'expérience</div></div>
+      <div class="stat"><div class="stat-num">100%</div><div class="stat-label" data-i18n="stat3">Conformité aux normes</div></div>
+      <div class="stat"><div class="stat-num">24/7</div><div class="stat-label" data-i18n="stat4">Support & Maintenance</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIF STRIP -->
+<div class="certif-strip">
+  <div class="certif-inner">
+    <div class="certif-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B1F3A" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg><span data-i18n="cert1">Normes Tunisiennes NT</span></div>
+    <div class="certif-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B1F3A" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="cert2">Agréé Ministère de l'Intérieur</span></div>
+    <div class="certif-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B1F3A" stroke-width="2"><path d="M12 2c0 0-5 4-5 9a5 5 0 0 0 10 0c0-5-5-9-5-9z"/><line x1="12" y1="12" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg><span data-i18n="cert3">NFPA Compliant</span></div>
+    <div class="certif-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B1F3A" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg><span data-i18n="cert4">Systèmes IP Certifiés</span></div>
+    <div class="certif-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B1F3A" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg><span data-i18n="cert5">SAV Garanti</span></div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section id="intro">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-item">
+        <div class="intro-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c0 0-5 5-5 10a5 5 0 0 0 10 0c0-5-5-10-5-10z"/><path d="M12 12c0 0-2 2-2 4a2 2 0 0 0 4 0c0-2-2-4-2-4z" fill="currentColor" stroke="none"/></svg></div>
+        <div><h4 data-i18n="intro1Title">Détection & Extinction Incendie</h4><p data-i18n="intro1Sub">Systèmes homologués, installation conforme aux normes tunisiennes et internationales.</p></div>
+      </div>
+      <div class="intro-divider"></div>
+      <div class="intro-item">
+        <div class="intro-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10l4.553-2.277A1 1 0 0 1 21 8.618v6.764a1 1 0 0 1-1.447.894L15 14"/><rect x="1" y="6" width="15" height="12" rx="2"/></svg></div>
+        <div><h4 data-i18n="intro2Title">Vidéosurveillance IP</h4><p data-i18n="intro2Sub">Surveillance à distance 24/7, caméras haute résolution pour tous types de sites.</p></div>
+      </div>
+      <div class="intro-divider"></div>
+      <div class="intro-item">
+        <div class="intro-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div><h4 data-i18n="intro3Title">Contrôle d'Accès</h4><p data-i18n="intro3Sub">Biométrie, badges et digicodes — sécurisez vos zones sensibles efficacement.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="apropos">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img fade-in" style="position:relative;">
+        <!-- ── ABOUT VISUAL CARD ── -->
+        <div style="
+          background: linear-gradient(145deg, #0B1F3A 0%, #132B50 60%, #1a2e50 100%);
+          border-radius: 12px;
+          overflow: hidden;
+          position: relative;
+          box-shadow: 0 24px 64px rgba(11,31,58,0.35);
+        ">
+          <!-- Subtle dot grid background -->
+          <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.07;" xmlns="http://www.w3.org/2000/svg">
+            <defs><pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="white"/></pattern></defs>
+            <rect width="100%" height="100%" fill="url(#dots)"/>
+          </svg>
+          <!-- Red top accent bar -->
+          <div style="height:3px;background:linear-gradient(90deg,#C8102E,#E8314E,#C8102E);"></div>
+
+          <!-- LOGO MARK centered -->
+          <div style="display:flex;justify-content:center;padding:2.2rem 2rem 1.4rem;position:relative;">
+            <!-- Glow behind shield -->
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:140px;height:140px;background:radial-gradient(circle,rgba(200,16,46,0.18) 0%,transparent 70%);border-radius:50%;"></div>
+            <svg width="110" height="120" viewBox="0 0 54 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:relative;z-index:1;filter:drop-shadow(0 8px 20px rgba(200,16,46,0.4));">
+              <path d="M27 2 L52 13 L52 36 C52 50 27 58 27 58 C27 58 2 50 2 36 L2 13 Z" fill="#C8102E"/>
+              <path d="M27 8 L47 18 L47 36 C47 47 27 54 27 54 C27 54 7 47 7 36 L7 18 Z" fill="#E8314E"/>
+              <path d="M12 46 L12 22 L27 36 L42 22 L42 46" fill="none" stroke="white" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+              <text x="27" y="52" text-anchor="middle" font-family="Arial" font-size="7.5" font-weight="900" fill="white" letter-spacing="2.5" opacity="0.95">MHD</text>
+            </svg>
+          </div>
+
+          <!-- Company name line -->
+          <div style="text-align:center;padding:0 2rem 1.6rem;position:relative;">
+            <div style="font-family:'Barlow Condensed',Arial;font-size:1.6rem;font-weight:900;color:white;letter-spacing:3px;text-transform:uppercase;line-height:1;">PROTECTA</div>
+            <div style="font-size:.65rem;color:rgba(255,255,255,0.4);letter-spacing:3px;text-transform:uppercase;margin-top:5px;">SÉCURITÉ · SURVEILLANCE · TUNISIE</div>
+            <div style="width:40px;height:2px;background:#C8102E;margin:10px auto 0;border-radius:2px;"></div>
+          </div>
+
+          <!-- 3 service pills -->
+          <div style="display:flex;gap:8px;padding:0 1.4rem 1.6rem;justify-content:center;flex-wrap:wrap;">
+            <div style="display:flex;align-items:center;gap:6px;background:rgba(200,16,46,0.15);border:1px solid rgba(200,16,46,0.35);border-radius:20px;padding:5px 12px;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2.5"><path d="M12 2c0 0-5 5-5 10a5 5 0 0 0 10 0c0-5-5-10-5-10z"/></svg>
+              <span style="font-size:.72rem;color:rgba(255,255,255,0.85);font-weight:600;white-space:nowrap;">Incendie</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;background:rgba(26,58,107,0.4);border:1px solid rgba(138,155,176,0.3);border-radius:20px;padding:5px 12px;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#8A9BB0" stroke-width="2"><path d="M15 10l4.553-2.277A1 1 0 0 1 21 8.618v6.764a1 1 0 0 1-1.447.894L15 14"/><rect x="1" y="6" width="15" height="12" rx="2"/></svg>
+              <span style="font-size:.72rem;color:rgba(255,255,255,0.85);font-weight:600;white-space:nowrap;">Surveillance</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;background:rgba(200,16,46,0.1);border:1px solid rgba(200,16,46,0.2);border-radius:20px;padding:5px 12px;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#8A9BB0" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span style="font-size:.72rem;color:rgba(255,255,255,0.85);font-weight:600;white-space:nowrap;">Accès</span>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div style="height:1px;background:rgba(255,255,255,0.07);margin:0 1.4rem;"></div>
+
+          <!-- Stats row -->
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;">
+            <div style="padding:1.2rem 0.8rem;text-align:center;border-right:1px solid rgba(255,255,255,0.07);">
+              <div style="font-family:'Barlow Condensed',Arial;font-size:1.8rem;font-weight:900;color:#C8102E;line-height:1;">+50</div>
+              <div style="font-size:.65rem;color:rgba(255,255,255,0.45);letter-spacing:1px;text-transform:uppercase;margin-top:3px;">Projets</div>
+            </div>
+            <div style="padding:1.2rem 0.8rem;text-align:center;border-right:1px solid rgba(255,255,255,0.07);">
+              <div style="font-family:'Barlow Condensed',Arial;font-size:1.8rem;font-weight:900;color:white;line-height:1;">10+</div>
+              <div style="font-size:.65rem;color:rgba(255,255,255,0.45);letter-spacing:1px;text-transform:uppercase;margin-top:3px;">Ans</div>
+            </div>
+            <div style="padding:1.2rem 0.8rem;text-align:center;">
+              <div style="font-family:'Barlow Condensed',Arial;font-size:1.8rem;font-weight:900;color:#C8102E;line-height:1;">100%</div>
+              <div style="font-size:.65rem;color:rgba(255,255,255,0.45);letter-spacing:1px;text-transform:uppercase;margin-top:3px;">Certifié</div>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div style="height:1px;background:rgba(255,255,255,0.07);margin:0 1.4rem;"></div>
+
+          <!-- Certifications -->
+          <div style="padding:1.2rem 1.4rem 1.6rem;">
+            <div style="font-size:.65rem;color:rgba(255,255,255,0.35);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">Certifications &amp; Agréments</div>
+            <div style="display:flex;flex-direction:column;gap:7px;">
+              <div style="display:flex;align-items:center;gap:8px;">
+                <div style="width:20px;height:20px;border-radius:50%;background:rgba(200,16,46,0.2);border:1px solid rgba(200,16,46,0.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span style="font-size:.78rem;color:rgba(255,255,255,0.7);">Norme Tunisienne NT 52-31</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <div style="width:20px;height:20px;border-radius:50%;background:rgba(200,16,46,0.2);border:1px solid rgba(200,16,46,0.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span style="font-size:.78rem;color:rgba(255,255,255,0.7);">NFPA — National Fire Protection</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <div style="width:20px;height:20px;border-radius:50%;background:rgba(200,16,46,0.2);border:1px solid rgba(200,16,46,0.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span style="font-size:.78rem;color:rgba(255,255,255,0.7);">Agréé Ministère de l'Intérieur</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <div style="width:20px;height:20px;border-radius:50%;background:rgba(200,16,46,0.2);border:1px solid rgba(200,16,46,0.4);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span style="font-size:.78rem;color:rgba(255,255,255,0.7);">Systèmes IP &amp; CCTV Certifiés</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom red accent -->
+          <div style="height:3px;background:linear-gradient(90deg,transparent,#C8102E,transparent);"></div>
+        </div>
+      </div>
+      <div class="fade-in">
+        <div class="section-tag" data-i18n="aboutTag">À propos de nous</div>
+        <h2 class="section-title" data-i18n="aboutTitle">MHD Protecta,<br>votre partenaire<br>de confiance</h2>
+        <p class="section-desc" style="margin-bottom:1rem;" data-i18n="aboutP1"><strong>MHD Protecta</strong> est une société tunisienne spécialisée dans la conception, l'installation et la maintenance de systèmes de sécurité.</p>
+        <p class="section-desc" style="margin-bottom:1.5rem;" data-i18n="aboutP2">Notre mission : <strong>protéger les personnes et les biens</strong> grâce à des solutions fiables, certifiées et conformes aux normes tunisiennes.</p>
+        <div class="values-grid">
+          <div class="value-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span data-i18n="val1">Fiabilité certifiée</span></div>
+          <div class="value-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span data-i18n="val2">Intervention rapide</span></div>
+          <div class="value-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M12 11l-2 1v3l2 1 2-1v-3z"/></svg><span data-i18n="val3">Conformité aux normes</span></div>
+          <div class="value-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"/></svg><span data-i18n="val4">Service après-vente</span></div>
+          <div class="value-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="14" r="6"/><path d="M12 8V2"/><path d="M9 5l3-3 3 3"/></svg><span data-i18n="val5">Matériel homologué</span></div>
+          <div class="value-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span data-i18n="val6">Couverture nationale</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="services-intro fade-in">
+      <div><div class="section-tag" data-i18n="servicesTag">Nos expertises</div><h2 class="section-title" data-i18n="servicesTitle">Des solutions complètes<br>de sécurité</h2></div>
+      <p style="max-width:400px;color:#5A6B80;font-size:.93rem;line-height:1.7;" data-i18n="servicesSub">De l'audit à la maintenance, MHD Protecta vous accompagne dans toutes les étapes de votre projet.</p>
+    </div>
+    <div class="services-grid">
+      <!-- FIRE - FEATURED -->
+      <div class="service-card featured fade-in">
+        <div class="featured-grid">
+          <div class="featured-left">
+            <div class="section-tag" data-i18n="fireTag">Service principal</div>
+            <div class="service-head">
+              <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c0 0-5 5-5 10a5 5 0 0 0 10 0c0-5-5-10-5-10z"/><line x1="12" y1="12" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg></div>
+              <div><h3 data-i18n="fireTitle">Sécurité Incendie</h3><span class="badge-featured" data-i18n="fireBadge">Service phare</span></div>
+            </div>
+            <p data-i18n="fireDesc">Solution globale de protection incendie conforme aux normes NT 52-31 et NFPA. De l'étude jusqu'à la maintenance réglementaire.</p>
+          </div>
+          <ul class="service-list" id="fireList">
+            <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="fi1">Étude et ingénierie de systèmes de détection incendie</span></li>
+            <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="fi2">Installation d'alarmes incendie (adressables et conventionnelles)</span></li>
+            <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="fi3">Vente, installation et recharge d'extincteurs</span></li>
+            <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="fi4">Systèmes de sprinklers et extinction automatique</span></li>
+            <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="fi5">Plans d'évacuation et signalisation de sécurité</span></li>
+            <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="fi6">Maintenance périodique & vérification réglementaire</span></li>
+            <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="fi7">Formation du personnel aux gestes de premiers secours</span></li>
+            <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="fi8">Conformité totale aux normes tunisiennes en vigueur</span></li>
+          </ul>
+        </div>
+      </div>
+      <!-- VIDEO -->
+      <div class="service-card fade-in">
+        <div class="service-head"><div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 10l4.553-2.277A1 1 0 0 1 21 8.618v6.764a1 1 0 0 1-1.447.894L15 14"/><rect x="1" y="6" width="15" height="12" rx="2"/></svg></div><div><h3 data-i18n="vidTitle">Vidéosurveillance</h3></div></div>
+        <p data-i18n="vidDesc">Systèmes de surveillance performants adaptés à tous types de sites professionnels, commerces et industrie.</p>
+        <ul class="service-list">
+          <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="vi1">Caméras IP haute définition (2MP, 4MP, 8MP)</span></li>
+          <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="vi2">Systèmes analogiques HD et hybrides</span></li>
+          <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="vi3">Surveillance à distance via smartphone</span></li>
+          <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="vi4">Enregistreurs NVR / DVR multi-canaux</span></li>
+          <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="vi5">Caméras PTZ et dômes motorisés</span></li>
+          <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="vi6">Maintenance et infogérance des systèmes</span></li>
+        </ul>
+      </div>
+      <!-- ACCESS -->
+      <div class="service-card fade-in">
+        <div class="service-head"><div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div><h3 data-i18n="accTitle">Contrôle d'accès</h3></div></div>
+        <p data-i18n="accDesc">Solutions biométriques et électroniques pour gérer et sécuriser l'accès à vos locaux.</p>
+        <ul class="service-list">
+          <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="ac1">Lecteurs biométriques (empreinte, visage)</span></li>
+          <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="ac2">Systèmes à badges et cartes RFID</span></li>
+          <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="ac3">Digicodes et interphones vidéo</span></li>
+          <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="ac4">Gestion des accès et horaires du personnel</span></li>
+          <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="ac5">Sécurisation de zones sensibles</span></li>
+          <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="ac6">Intégration avec systèmes RH</span></li>
+        </ul>
+      </div>
+      <!-- NETWORK -->
+      <div class="service-card fade-in">
+        <div class="service-head"><div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="2" width="6" height="4" rx="1"/><rect x="2" y="14" width="6" height="4" rx="1"/><rect x="16" y="14" width="6" height="4" rx="1"/><path d="M5 14v-3h14v3"/><line x1="12" y1="6" x2="12" y2="11"/></svg></div><div><h3 data-i18n="netTitle">Réseaux & Électricité</h3></div></div>
+        <p data-i18n="netDesc">Infrastructure réseau et électrique professionnelle pour supporter vos systèmes de sécurité.</p>
+        <ul class="service-list">
+          <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="ne1">Câblage structuré Cat6 / fibre optique</span></li>
+          <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="ne2">Installation de réseaux informatiques</span></li>
+          <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="ne3">Armoires de brassage et switch managés</span></li>
+          <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="ne4">Travaux électriques courants forts / faibles</span></li>
+          <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="ne5">Alimentation secourue (UPS / onduleurs)</span></li>
+          <li><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg><span data-i18n="ne6">Maintenance technique préventive</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RÉALISATIONS -->
+<section id="realisations">
+  <div class="container">
+    <div class="fade-in"><div class="section-tag" data-i18n="realTag">Nos projets</div><h2 class="section-title" data-i18n="realTitle">Réalisations &<br>projets récents</h2></div>
+    <div class="real-grid" style="grid-template-columns:repeat(3,1fr);">
+
+      <!-- PROJECT 1 : Fire Safety — Industrial -->
+      <div class="real-card fade-in">
+        <div class="real-img">
+          <svg width="100%" height="100%" viewBox="0 0 600 375" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+            <defs>
+              <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0B1F3A"/><stop offset="100%" stop-color="#1A3A6B"/></linearGradient>
+              <linearGradient id="flame1" x1="0%" y1="100%" x2="50%" y2="0%"><stop offset="0%" stop-color="#FF6B00"/><stop offset="100%" stop-color="#FFD700"/></linearGradient>
+            </defs>
+            <rect width="600" height="375" fill="url(#bg1)"/>
+            <!-- Factory building -->
+            <rect x="60" y="180" width="480" height="160" fill="#0d2a4a" rx="2"/>
+            <rect x="60" y="220" width="480" height="4" fill="#C8102E" opacity="0.6"/>
+            <!-- Windows -->
+            <rect x="90" y="240" width="50" height="40" fill="#1A3A6B" rx="2"/><rect x="92" y="242" width="46" height="36" fill="#2a4a7b" rx="1" opacity="0.7"/>
+            <rect x="170" y="240" width="50" height="40" fill="#1A3A6B" rx="2"/><rect x="172" y="242" width="46" height="36" fill="#2a4a7b" rx="1" opacity="0.7"/>
+            <rect x="330" y="240" width="50" height="40" fill="#1A3A6B" rx="2"/>
+            <rect x="410" y="240" width="50" height="40" fill="#1A3A6B" rx="2"/>
+            <!-- Chimneys -->
+            <rect x="200" y="120" width="30" height="65" fill="#0d2a4a" rx="2"/>
+            <rect x="280" y="100" width="30" height="85" fill="#0d2a4a" rx="2"/>
+            <rect x="360" y="130" width="30" height="55" fill="#0d2a4a" rx="2"/>
+            <!-- Smoke -->
+            <ellipse cx="215" cy="115" rx="18" ry="10" fill="rgba(255,255,255,0.06)"/>
+            <ellipse cx="225" cy="100" rx="14" ry="8" fill="rgba(255,255,255,0.04)"/>
+            <ellipse cx="295" cy="95" rx="18" ry="10" fill="rgba(255,255,255,0.06)"/>
+            <!-- Fire extinguisher icon -->
+            <g transform="translate(480,100)">
+              <rect x="0" y="10" width="24" height="40" rx="5" fill="#C8102E"/>
+              <rect x="4" y="3" width="6" height="12" rx="2" fill="#aaa"/>
+              <rect x="8" y="0" width="8" height="5" rx="1" fill="#999"/>
+              <rect x="18" y="8" width="16" height="3" rx="1" fill="#aaa"/>
+            </g>
+            <!-- Flame -->
+            <path d="M100 180 C95 160 105 140 100 120 C108 135 118 130 115 150 C120 138 128 132 126 148 C130 140 136 142 132 158 C136 150 140 155 136 170 C128 165 120 168 115 175 C110 170 105 172 100 180Z" fill="url(#flame1)" opacity="0.9"/>
+            <!-- Alarm light -->
+            <circle cx="300" cy="75" r="15" fill="#C8102E" opacity="0.8"/>
+            <circle cx="300" cy="75" r="8" fill="#FF6B00"/>
+            <line x1="300" y1="55" x2="300" y2="90" stroke="#C8102E" stroke-width="2" opacity="0.4"/>
+            <line x1="280" y1="75" x2="320" y2="75" stroke="#C8102E" stroke-width="2" opacity="0.4"/>
+            <!-- Stars/dots -->
+            <circle cx="450" cy="60" r="2" fill="white" opacity="0.3"/>
+            <circle cx="480" cy="40" r="1.5" fill="white" opacity="0.2"/>
+            <circle cx="150" cy="50" r="2" fill="white" opacity="0.25"/>
+            <circle cx="50" cy="80" r="1.5" fill="white" opacity="0.2"/>
+            <!-- Ground -->
+            <rect x="0" y="340" width="600" height="35" fill="#071528"/>
+            <!-- Label band -->
+            <rect x="0" y="300" width="600" height="40" fill="rgba(200,16,46,0.85)"/>
+            <text x="30" y="326" font-family="Arial" font-size="15" font-weight="bold" fill="white">🔥  SYSTÈME DÉTECTION INCENDIE — USINE INDUSTRIELLE</text>
+          </svg>
+          <div class="real-overlay"><span class="real-cat" data-i18n="cat1">Sécurité Incendie</span></div>
+        </div>
+        <div class="real-body">
+          <h4 data-i18n="proj1Title">Usine agroalimentaire — Kebili</h4>
+          <p data-i18n="proj1Desc">Installation complète d'un système de détection incendie adressable, 24 détecteurs de fumée, centrale incendie et 18 extincteurs CO₂ homologués.</p>
+          <div class="real-meta">
+            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2024</span>
+            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Kebili</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 : CCTV — Office building -->
+      <div class="real-card fade-in">
+        <div class="real-img">
+          <svg width="100%" height="100%" viewBox="0 0 600 375" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+            <defs>
+              <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#132B50"/><stop offset="100%" stop-color="#0B1F3A"/></linearGradient>
+            </defs>
+            <rect width="600" height="375" fill="url(#bg2)"/>
+            <!-- Building grid (office) -->
+            <rect x="100" y="60" width="400" height="280" fill="#0d2040" rx="4"/>
+            <!-- Floor lines -->
+            <line x1="100" y1="120" x2="500" y2="120" stroke="#1A3A6B" stroke-width="1.5"/>
+            <line x1="100" y1="180" x2="500" y2="180" stroke="#1A3A6B" stroke-width="1.5"/>
+            <line x1="100" y1="240" x2="500" y2="240" stroke="#1A3A6B" stroke-width="1.5"/>
+            <line x1="100" y1="300" x2="500" y2="300" stroke="#1A3A6B" stroke-width="1.5"/>
+            <!-- Window grid -->
+            <line x1="200" y1="60" x2="200" y2="340" stroke="#1A3A6B" stroke-width="1.5"/>
+            <line x1="300" y1="60" x2="300" y2="340" stroke="#1A3A6B" stroke-width="1.5"/>
+            <line x1="400" y1="60" x2="400" y2="340" stroke="#1A3A6B" stroke-width="1.5"/>
+            <!-- Lit windows -->
+            <rect x="110" y="70" width="80" height="40" fill="#2a4a7b" opacity="0.9" rx="1"/>
+            <rect x="210" y="70" width="80" height="40" fill="#1e3d6a" opacity="0.6" rx="1"/>
+            <rect x="310" y="70" width="80" height="40" fill="#2a4a7b" opacity="0.9" rx="1"/>
+            <rect x="110" y="130" width="80" height="40" fill="#1e3d6a" opacity="0.5" rx="1"/>
+            <rect x="210" y="130" width="80" height="40" fill="#2a4a7b" opacity="0.9" rx="1"/>
+            <rect x="310" y="130" width="80" height="40" fill="#1e3d6a" opacity="0.5" rx="1"/>
+            <rect x="410" y="130" width="80" height="40" fill="#2a4a7b" opacity="0.9" rx="1"/>
+            <rect x="110" y="190" width="80" height="40" fill="#2a4a7b" opacity="0.8" rx="1"/>
+            <rect x="310" y="190" width="80" height="40" fill="#2a4a7b" opacity="0.7" rx="1"/>
+            <rect x="410" y="70" width="80" height="40" fill="#1e3d6a" opacity="0.6" rx="1"/>
+            <!-- Camera icons on corners -->
+            <g transform="translate(95,55)">
+              <rect x="0" y="4" width="20" height="10" rx="2" fill="#C8102E"/>
+              <polygon points="20,4 30,0 30,18 20,14" fill="#E8314E"/>
+              <circle cx="5" cy="9" r="3" fill="#FF6B00"/>
+            </g>
+            <g transform="translate(475,55)">
+              <rect x="10" y="4" width="20" height="10" rx="2" fill="#C8102E"/>
+              <polygon points="10,4 0,0 0,18 10,14" fill="#E8314E"/>
+              <circle cx="25" cy="9" r="3" fill="#FF6B00"/>
+            </g>
+            <g transform="translate(95,320)">
+              <rect x="0" y="4" width="20" height="10" rx="2" fill="#C8102E"/>
+              <polygon points="20,4 30,0 30,18 20,14" fill="#E8314E"/>
+              <circle cx="5" cy="9" r="3" fill="#FF6B00"/>
+            </g>
+            <g transform="translate(475,320)">
+              <rect x="10" y="4" width="20" height="10" rx="2" fill="#C8102E"/>
+              <polygon points="10,4 0,0 0,18 10,14" fill="#E8314E"/>
+              <circle cx="25" cy="9" r="3" fill="#FF6B00"/>
+            </g>
+            <!-- Scan lines from cameras -->
+            <line x1="125" y1="65" x2="200" y2="150" stroke="#C8102E" stroke-width="1" opacity="0.25"/>
+            <line x1="490" y1="65" x2="410" y2="150" stroke="#C8102E" stroke-width="1" opacity="0.25"/>
+            <!-- NVR box -->
+            <rect x="230" y="290" width="140" height="30" rx="4" fill="#0a1a30"/>
+            <rect x="235" y="295" width="18" height="18" rx="2" fill="#1A3A6B"/>
+            <circle cx="370" cy="304" r="5" fill="#22c55e"/>
+            <rect x="260" y="299" width="80" height="4" rx="1" fill="#1A3A6B"/>
+            <rect x="260" y="306" width="50" height="3" rx="1" fill="#132B50"/>
+            <!-- Label -->
+            <rect x="0" y="300" width="600" height="40" fill="rgba(11,31,58,0.88)"/>
+            <text x="30" y="326" font-family="Arial" font-size="15" font-weight="bold" fill="white">📹  VIDÉOSURVEILLANCE IP — IMMEUBLE DE BUREAUX</text>
+          </svg>
+          <div class="real-overlay"><span class="real-cat" data-i18n="cat2">Vidéosurveillance</span></div>
+        </div>
+        <div class="real-body">
+          <h4 data-i18n="proj2Title">Immeuble de bureaux — Kebili</h4>
+          <p data-i18n="proj2Desc">Déploiement de 16 caméras IP HD, enregistreur NVR 24 canaux, accès mobile en temps réel et câblage structuré sur 4 niveaux.</p>
+          <div class="real-meta">
+            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2024</span>
+            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Kebili</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 3 : Access Control — Commercial -->
+      <div class="real-card fade-in">
+        <div class="real-img">
+          <svg width="100%" height="100%" viewBox="0 0 600 375" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+            <defs>
+              <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0B1F3A"/><stop offset="100%" stop-color="#9B0D22" stop-opacity="0.5"/></linearGradient>
+              <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#C8102E" stop-opacity="0.3"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+            </defs>
+            <rect width="600" height="375" fill="url(#bg3)"/>
+            <!-- Glow -->
+            <ellipse cx="300" cy="187" rx="180" ry="160" fill="url(#glow)"/>
+            <!-- Door frame -->
+            <rect x="220" y="80" width="160" height="240" rx="4" fill="#0d2040"/>
+            <rect x="224" y="84" width="152" height="232" rx="2" fill="#0a1830"/>
+            <!-- Door panel lines -->
+            <rect x="230" y="90" width="140" height="100" rx="2" fill="#132B50" opacity="0.8"/>
+            <rect x="230" y="200" width="140" height="100" rx="2" fill="#132B50" opacity="0.8"/>
+            <!-- Door handle -->
+            <circle cx="350" cy="200" r="6" fill="#aaa"/>
+            <rect x="352" y="190" width="4" height="20" rx="2" fill="#888"/>
+            <!-- Access panel / keypad -->
+            <rect x="380" y="140" width="70" height="100" rx="6" fill="#091929"/>
+            <rect x="386" y="146" width="58" height="88" rx="4" fill="#0d2040"/>
+            <!-- Fingerprint icon -->
+            <g transform="translate(403,155)">
+              <path d="M12 0C5.4 0 0 5.4 0 12c0 3.8 1.8 7.2 4.6 9.4" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12 4C7.6 4 4 7.6 4 12c0 2.4.9 4.5 2.4 6.1" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round"/>
+              <path d="M12 8c-2.2 0-4 1.8-4 4 0 1.3.6 2.4 1.5 3.2" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="12" cy="12" r="2" fill="#C8102E"/>
+            </g>
+            <!-- Keypad dots -->
+            <circle cx="395" cy="210" r="4" fill="#1A3A6B"/><circle cx="408" cy="210" r="4" fill="#1A3A6B"/><circle cx="421" cy="210" r="4" fill="#1A3A6B"/>
+            <circle cx="395" cy="222" r="4" fill="#1A3A6B"/><circle cx="408" cy="222" r="4" fill="#22c55e"/><circle cx="421" cy="222" r="4" fill="#1A3A6B"/>
+            <!-- Access granted light -->
+            <circle cx="415" cy="152" r="5" fill="#22c55e"/>
+            <circle cx="415" cy="152" r="3" fill="#16a34a"/>
+            <!-- Badge card -->
+            <rect x="130" y="160" width="70" height="45" rx="4" fill="#C8102E" transform="rotate(-10,165,182)"/>
+            <rect x="136" y="166" width="58" height="33" rx="2" fill="#E8314E" transform="rotate(-10,165,182)"/>
+            <circle cx="148" cy="176" r="8" fill="#9B0D22" transform="rotate(-10,165,182)"/>
+            <rect x="158" y="172" width="28" height="4" rx="1" fill="rgba(255,255,255,0.5)" transform="rotate(-10,165,182)"/>
+            <rect x="158" y="180" width="20" height="3" rx="1" fill="rgba(255,255,255,0.3)" transform="rotate(-10,165,182)"/>
+            <!-- RFID wave lines -->
+            <path d="M190 185 Q200 170 190 155" fill="none" stroke="#C8102E" stroke-width="1.5" opacity="0.5" stroke-dasharray="3,2"/>
+            <path d="M198 190 Q212 170 198 150" fill="none" stroke="#C8102E" stroke-width="1.5" opacity="0.35" stroke-dasharray="3,2"/>
+            <!-- Label -->
+            <rect x="0" y="300" width="600" height="40" fill="rgba(155,13,34,0.85)"/>
+            <text x="30" y="326" font-family="Arial" font-size="15" font-weight="bold" fill="white">🔐  CONTRÔLE D'ACCÈS BIOMÉTRIQUE — CENTRE COMMERCIAL</text>
+          </svg>
+          <div class="real-overlay"><span class="real-cat" data-i18n="cat3">Contrôle d'accès</span></div>
+        </div>
+        <div class="real-body">
+          <h4 data-i18n="proj3Title">Centre commercial — Kebili</h4>
+          <p data-i18n="proj3Desc">Système de contrôle d'accès biométrique (empreinte + badge RFID), gestion de 3 entrées, pointeuse du personnel et sécurisation des zones réservées.</p>
+          <div class="real-meta">
+            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 2023</span>
+            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Kebili</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section id="cta-banner">
+  <div class="container">
+    <h2 data-i18n="ctaTitle">Prêt à sécuriser votre site ?</h2>
+    <p data-i18n="ctaSub">Contactez-nous pour une étude personnalisée et un devis gratuit. Nos experts se déplacent partout en Tunisie.</p>
+    <div class="cta-btns">
+      <a href="#contact" class="btn-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span data-i18n="ctaBtn1">Demander un devis gratuit</span></a>
+      <a href="tel:+21600000000" class="btn-outline"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg><span data-i18n="ctaBtn2">Appeler maintenant</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="fade-in"><div class="section-tag" data-i18n="contactTag">Contactez-nous</div><h2 class="section-title" data-i18n="contactTitle">Parlez-nous de<br>votre projet</h2></div>
+    <div class="contact-grid">
+      <div class="fade-in">
+        <div class="contact-info">
+          <h3 data-i18n="contactCoords">Nos coordonnées</h3>
+          <div class="contact-item"><div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg></div><div><h5 data-i18n="labelPhone">Téléphone</h5><p><a href="tel:+21653165606">+216 53 165 606</a></p></div></div>
+          <div class="contact-item"><div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><h5>Email</h5><p><a href="mailto:contact@mhdprotecta.tn">contact@mhdprotecta.tn</a></p></div></div>
+          <div class="contact-item"><div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h5 data-i18n="labelAddr">Adresse</h5><p data-i18n="addrVal">Kebili, Tunisie</p></div></div>
+          <div class="contact-item"><div class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><h5 data-i18n="labelHours">Horaires</h5><p data-i18n="hoursVal">Lun – Ven : 8h00 – 18h00<br>Sam : 9h00 – 13h00</p></div></div>
+        </div>
+        <div class="map-embed"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54144.62!2d8.9689!3d33.7037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12544f0a8a8a8a8b%3A0x0!2sKebili%2C+Tunisia!5e0!3m2!1sfr!2stn!4v1699000000000!5m2!1sfr!2stn" width="100%" height="190" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      </div>
+      <div class="contact-form fade-in">
+        <h3 data-i18n="formTitle">Demande de devis gratuit</h3>
+        <div class="form-row">
+          <div class="form-group"><label data-i18n="formName">Nom complet *</label><input id="fName" type="text" data-i18n-ph="formNamePh" placeholder="Votre nom"></div>
+          <div class="form-group"><label data-i18n="formCompany">Société</label><input id="fCompany" type="text" data-i18n-ph="formCompanyPh" placeholder="Nom de votre société"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Email *</label><input id="fEmail" type="email" placeholder="email@exemple.com"></div>
+          <div class="form-group"><label data-i18n="formPhone">Téléphone *</label><input id="fPhone" type="tel" placeholder="+216 XX XXX XXX"></div>
+        </div>
+        <div class="form-group">
+          <label data-i18n="formService">Service souhaité</label>
+          <select id="serviceSelect">
+            <option value="" data-i18n="formServiceDefault">-- Sélectionner un service --</option>
+            <option data-i18n="svcFire">Sécurité incendie</option>
+            <option data-i18n="svcVideo">Vidéosurveillance</option>
+            <option data-i18n="svcAccess">Contrôle d'accès</option>
+            <option data-i18n="svcNet">Réseaux & Électricité</option>
+            <option data-i18n="svcFull">Solution complète</option>
+          </select>
+        </div>
+        <div class="form-group"><label data-i18n="formMsg">Message</label><textarea id="fMsg" data-i18n-ph="formMsgPh" placeholder="Décrivez votre projet..."></textarea></div>
+
+        <!-- PDF UPLOAD -->
+        <div class="form-group">
+          <label data-i18n="formPdf">Document (PDF, optionnel)</label>
+          <div class="file-upload-zone" id="uploadZone">
+            <input type="file" id="pdfFile" accept=".pdf,.doc,.docx" onchange="handleFile(this)">
+            <div class="file-upload-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="12" x2="12" y2="18"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+            </div>
+            <div class="file-upload-text" data-i18n="formPdfDrop">Glissez un PDF ou cliquez pour parcourir</div>
+            <div class="file-upload-hint" data-i18n="formPdfHint">PDF, DOC, DOCX — max 5 MB</div>
+          </div>
+          <div class="file-preview" id="filePreview">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <span class="file-preview-name" id="fileName">—</span>
+            <span class="file-preview-size" id="fileSize"></span>
+            <button class="file-preview-remove" onclick="removeFile()" type="button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          </div>
+        </div>
+        <button class="form-submit" onclick="handleSubmit(event)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          <span data-i18n="formBtn">Envoyer ma demande</span>
+        </button>
+        <p style="font-size:.76rem;color:#8A9BB0;margin-top:11px;text-align:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span data-i18n="formPrivacy">Vos données sont confidentielles. Réponse sous 24h.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Toast notification -->
+<div class="toast" id="toast"></div>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function(){ emailjs.init({ publicKey: 'YOUR_EMAILJS_PUBLIC_KEY' }); })();
+</script>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo" style="display:inline-flex;margin-bottom:.5rem;text-decoration:none;gap:12px;align-items:center;">
+          <!-- CONCEPT 3 LOGO MARK (footer size) -->
+          <svg width="38" height="42" viewBox="0 0 54 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 2 L52 13 L52 36 C52 50 27 58 27 58 C27 58 2 50 2 36 L2 13 Z" fill="#C8102E"/>
+            <path d="M27 8 L47 18 L47 36 C47 47 27 54 27 54 C27 54 7 47 7 36 L7 18 Z" fill="#E8314E"/>
+            <path d="M12 46 L12 22 L27 36 L42 22 L42 46" fill="none" stroke="white" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+            <text x="27" y="51" text-anchor="middle" font-family="Arial" font-size="7" font-weight="900" fill="white" letter-spacing="2" opacity="0.9">MHD</text>
+          </svg>
+          <div class="logo-text" style="margin-inline-start:0;">
+            <div class="logo-name" style="font-size:1.2rem;letter-spacing:1.5px;text-transform:uppercase;">PROTECTA</div>
+            <div class="logo-sub" data-i18n="logoSub">Sécurité & Protection</div>
+          </div>
+        </a>
+        <p data-i18n="footerDesc">Expert tunisien en sécurité incendie, vidéosurveillance et contrôle d'accès. Votre partenaire de confiance depuis plus de 10 ans.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.122 1.523 5.858L.057 23.5l5.778-1.516A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.007-1.366l-.36-.213-3.43.9.915-3.345-.234-.374A9.786 9.786 0 0 1 2.182 12C2.182 6.593 6.593 2.182 12 2.182S21.818 6.593 21.818 12 17.407 21.818 12 21.818z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footerServices">Services</h5>
+        <ul>
+          <li><a href="#services"><svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor" style="color:var(--red)"><polygon points="5 3 19 12 5 21 5 3"/></svg> <span data-i18n="fireTitle2">Sécurité incendie</span></a></li>
+          <li><a href="#services"><svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor" style="color:var(--red)"><polygon points="5 3 19 12 5 21 5 3"/></svg> <span data-i18n="vidTitle">Vidéosurveillance</span></a></li>
+          <li><a href="#services"><svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor" style="color:var(--red)"><polygon points="5 3 19 12 5 21 5 3"/></svg> <span data-i18n="accTitle">Contrôle d'accès</span></a></li>
+          <li><a href="#services"><svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor" style="color:var(--red)"><polygon points="5 3 19 12 5 21 5 3"/></svg> <span data-i18n="netTitle">Réseaux & Électricité</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footerLinks">Liens utiles</h5>
+        <ul>
+          <li><a href="#apropos"><svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor" style="color:var(--red)"><polygon points="5 3 19 12 5 21 5 3"/></svg> <span data-i18n="navAbout">À propos</span></a></li>
+          <li><a href="#realisations"><svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor" style="color:var(--red)"><polygon points="5 3 19 12 5 21 5 3"/></svg> <span data-i18n="navReal">Réalisations</span></a></li>
+          <li><a href="#contact"><svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor" style="color:var(--red)"><polygon points="5 3 19 12 5 21 5 3"/></svg> <span data-i18n="navQuote">Devis gratuit</span></a></li>
+          <li><a href="#contact"><svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor" style="color:var(--red)"><polygon points="5 3 19 12 5 21 5 3"/></svg> <span data-i18n="navContact">Contact</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="navContact">Contact</h5>
+        <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg><a href="tel:+21653165606">+216 53 165 606</a></div>
+        <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:contact@mhdprotecta.tn">contact@mhdprotecta.tn</a></div>
+        <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Kebili, Tunisie</span></div>
+        <div class="footer-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-i18n="hoursShort">Lun–Ven 8h–18h</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 MHD Protecta. <span data-i18n="footerRights">Tous droits réservés.</span></span>
+      <span data-i18n="footerKeywords">Sécurité incendie · Vidéosurveillance · Contrôle d'accès – Tunisie</span>
+      <span style="color:rgba(255,255,255,.2);font-size:.72rem;">
+        Conçu par 
+        <a href="https://linkedin.com/company/digithage" target="_blank" style="color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#C8102E'" onmouseout="this.style.color='rgba(255,255,255,.35)'">Digithage</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ══════════════════════════════════════════
+//  TRANSLATIONS
+// ══════════════════════════════════════════
+const T = {
+  fr: {
+    logoSub:'Sécurité & Protection', navAbout:'À propos', navServices:'Services', navReal:'Réalisations', navContact:'Contact', navQuote:'Devis gratuit', navQuoteMobile:'➤ Demander un devis',
+    heroBadge:'Certifié & Agréé en Tunisie', heroTitle1:'Votre sécurité,', heroTitle2:'notre priorité.', heroSub:'Solutions professionnelles en sécurité incendie, vidéosurveillance et contrôle d\'accès — pour entreprises, industries et institutions en Tunisie.',
+    heroCta1:'Demander un devis', heroCta2:'Nos services', stat1:'Projets réalisés', stat2:'Années d\'expérience', stat3:'Conformité aux normes', stat4:'Support & Maintenance',
+    cert1:'Normes Tunisiennes NT', cert2:'Agréé Ministère de l\'Intérieur', cert3:'NFPA Compliant', cert4:'Systèmes IP Certifiés', cert5:'SAV Garanti',
+    intro1Title:'Détection & Extinction Incendie', intro1Sub:'Systèmes homologués, installation conforme aux normes tunisiennes et internationales.',
+    intro2Title:'Vidéosurveillance IP', intro2Sub:'Surveillance à distance 24/7, caméras haute résolution pour tous types de sites.',
+    intro3Title:'Contrôle d\'Accès', intro3Sub:'Biométrie, badges et digicodes — sécurisez vos zones sensibles efficacement.',
+    aboutTag:'À propos de nous', aboutTitle:'MHD Protecta,<br>votre partenaire<br>de confiance', aboutBadge:'Expert en Sécurité', aboutCard:'Ans d\'expertise<br>en Tunisie',
+    aboutP1:'<strong>MHD Protecta</strong> est une société tunisienne spécialisée dans la conception, l\'installation et la maintenance de systèmes de sécurité.',
+    aboutP2:'Notre mission : <strong>protéger les personnes et les biens</strong> grâce à des solutions fiables, certifiées et conformes aux normes tunisiennes.',
+    val1:'Fiabilité certifiée', val2:'Intervention rapide', val3:'Conformité aux normes', val4:'Service après-vente', val5:'Matériel homologué', val6:'Couverture nationale',
+    servicesTag:'Nos expertises', servicesTitle:'Des solutions complètes<br>de sécurité', servicesSub:'De l\'audit à la maintenance, MHD Protecta vous accompagne dans toutes les étapes de votre projet.',
+    fireTag:'Service principal', fireTitle:'Sécurité Incendie', fireTitle2:'Sécurité incendie', fireBadge:'Service phare', fireDesc:'Solution globale de protection incendie conforme aux normes NT 52-31 et NFPA.',
+    fi1:'Étude et ingénierie de systèmes de détection incendie', fi2:'Installation d\'alarmes incendie (adressables et conventionnelles)', fi3:'Vente, installation et recharge d\'extincteurs', fi4:'Systèmes de sprinklers et extinction automatique', fi5:'Plans d\'évacuation et signalisation de sécurité', fi6:'Maintenance périodique & vérification réglementaire', fi7:'Formation du personnel aux gestes de premiers secours', fi8:'Conformité totale aux normes tunisiennes en vigueur',
+    vidTitle:'Vidéosurveillance', vidDesc:'Systèmes de surveillance performants adaptés à tous types de sites professionnels, commerces et industrie.',
+    vi1:'Caméras IP haute définition (2MP, 4MP, 8MP)', vi2:'Systèmes analogiques HD et hybrides', vi3:'Surveillance à distance via smartphone', vi4:'Enregistreurs NVR / DVR multi-canaux', vi5:'Caméras PTZ et dômes motorisés', vi6:'Maintenance et infogérance des systèmes',
+    accTitle:'Contrôle d\'accès', accDesc:'Solutions biométriques et électroniques pour gérer et sécuriser l\'accès à vos locaux.',
+    ac1:'Lecteurs biométriques (empreinte, visage)', ac2:'Systèmes à badges et cartes RFID', ac3:'Digicodes et interphones vidéo', ac4:'Gestion des accès et horaires du personnel', ac5:'Sécurisation de zones sensibles', ac6:'Intégration avec systèmes RH',
+    netTitle:'Réseaux & Électricité', netDesc:'Infrastructure réseau et électrique professionnelle pour supporter vos systèmes de sécurité.',
+    ne1:'Câblage structuré Cat6 / fibre optique', ne2:'Installation de réseaux informatiques', ne3:'Armoires de brassage et switch managés', ne4:'Travaux électriques courants forts / faibles', ne5:'Alimentation secourue (UPS / onduleurs)', ne6:'Maintenance technique préventive',
+    realTag:'Nos projets', realTitle:'Réalisations &<br>projets récents',
+    cat1:'Sécurité Incendie', cat2:'Vidéosurveillance', cat3:'Contrôle d\'accès',
+    proj1Title:'Usine agroalimentaire — Kebili', proj1Desc:'Installation complète d\'un système de détection incendie adressable, 24 détecteurs de fumée, centrale incendie et 18 extincteurs CO₂ homologués.',
+    proj2Title:'Immeuble de bureaux — Kebili', proj2Desc:'Déploiement de 16 caméras IP HD, enregistreur NVR 24 canaux, accès mobile en temps réel et câblage structuré sur 4 niveaux.',
+    proj3Title:'Centre commercial — Kebili', proj3Desc:'Système de contrôle d\'accès biométrique (empreinte + badge RFID), gestion de 3 entrées, pointeuse du personnel et sécurisation des zones réservées.',
+    ctaTitle:'Prêt à sécuriser votre site ?', ctaSub:'Contactez-nous pour une étude personnalisée et un devis gratuit. Nos experts se déplacent partout en Tunisie.',
+    ctaBtn1:'Demander un devis gratuit', ctaBtn2:'Appeler maintenant',
+    contactTag:'Contactez-nous', contactTitle:'Parlez-nous de<br>votre projet', contactCoords:'Nos coordonnées',
+    labelPhone:'Téléphone', labelAddr:'Adresse', labelHours:'Horaires', addrVal:'Kebili, Tunisie', hoursVal:'Lun – Ven : 8h00 – 18h00<br>Sam : 9h00 – 13h00', hoursShort:'Lun–Ven 8h–18h',
+    formTitle:'Demande de devis gratuit', formName:'Nom complet *', formNamePh:'Votre nom', formCompany:'Société', formCompanyPh:'Nom de votre société', formPhone:'Téléphone *', formService:'Service souhaité', formServiceDefault:'-- Sélectionner un service --', formMsg:'Message', formMsgPh:'Décrivez votre projet...', formBtn:'Envoyer ma demande', formPrivacy:'Vos données sont confidentielles. Réponse sous 24h.',
+    svcFire:'Sécurité incendie', svcVideo:'Vidéosurveillance', svcAccess:'Contrôle d\'accès', svcNet:'Réseaux & Électricité', svcFull:'Solution complète',
+    footerDesc:'Expert tunisien en sécurité incendie, vidéosurveillance et contrôle d\'accès. Votre partenaire de confiance depuis plus de 10 ans.',
+    footerServices:'Services', footerLinks:'Liens utiles', footerRights:'Tous droits réservés.', footerKeywords:'Sécurité incendie · Vidéosurveillance · Contrôle d\'accès – Tunisie',
+    formSuccess:'Demande envoyée !', formSuccessMsg:'Demande envoyée ! Nous vous répondrons sous 24h.', formFallback:'Ouverture de votre client email...',
+    formValidation:'Veuillez remplir les champs obligatoires (Nom & Email).', formEmailError:'Adresse email invalide.', formFileError:'Fichier trop grand (max 5 MB).',
+    formPdf:'Document joint (PDF, optionnel)', formPdfDrop:'Glissez un PDF ici ou cliquez pour parcourir', formPdfHint:'PDF, DOC, DOCX — max 5 MB',
+  },
+  en: {
+    logoSub:'Security & Protection', navAbout:'About', navServices:'Services', navReal:'Projects', navContact:'Contact', navQuote:'Free Quote', navQuoteMobile:'➤ Get a Quote',
+    heroBadge:'Certified & Licensed in Tunisia', heroTitle1:'Your security,', heroTitle2:'our priority.', heroSub:'Professional fire safety, video surveillance and access control solutions — for businesses, industries and institutions across Tunisia.',
+    heroCta1:'Request a Quote', heroCta2:'Our Services', stat1:'Completed Projects', stat2:'Years of Experience', stat3:'Standards Compliance', stat4:'Support & Maintenance',
+    cert1:'Tunisian NT Standards', cert2:'Ministry of Interior Licensed', cert3:'NFPA Compliant', cert4:'Certified IP Systems', cert5:'Guaranteed After-Sales',
+    intro1Title:'Fire Detection & Suppression', intro1Sub:'Approved systems installed in compliance with Tunisian and international standards.',
+    intro2Title:'IP Video Surveillance', intro2Sub:'24/7 remote monitoring, high-resolution cameras for all site types.',
+    intro3Title:'Access Control', intro3Sub:'Biometrics, badges and keypads — secure your sensitive areas effectively.',
+    aboutTag:'About Us', aboutTitle:'MHD Protecta,<br>your trusted<br>partner', aboutBadge:'Security Expert', aboutCard:'Years of expertise<br>in Tunisia',
+    aboutP1:'<strong>MHD Protecta</strong> is a Tunisian company specializing in the design, installation and maintenance of security systems.',
+    aboutP2:'Our mission: <strong>protect people and property</strong> through reliable, certified solutions that comply with Tunisian regulations.',
+    val1:'Certified reliability', val2:'Rapid response', val3:'Standards compliance', val4:'After-sales service', val5:'Approved equipment', val6:'Nationwide coverage',
+    servicesTag:'Our Expertise', servicesTitle:'Complete security<br>solutions', servicesSub:'From audit to maintenance, MHD Protecta supports you at every step of your security project.',
+    fireTag:'Main Service', fireTitle:'Fire Safety', fireTitle2:'Fire Safety', fireBadge:'Flagship Service', fireDesc:'Comprehensive fire protection solution compliant with NT 52-31 and NFPA standards, from design to regulatory maintenance.',
+    fi1:'Fire detection system engineering & design', fi2:'Fire alarm installation (addressable & conventional)', fi3:'Fire extinguisher sales, installation & servicing', fi4:'Sprinkler and automatic suppression systems', fi5:'Evacuation plans and safety signage', fi6:'Periodic maintenance & regulatory inspection', fi7:'Staff training in fire emergency response', fi8:'Full compliance with current Tunisian standards',
+    vidTitle:'Video Surveillance', vidDesc:'High-performance surveillance systems for all types of professional sites, retail and industrial facilities.',
+    vi1:'HD IP cameras (2MP, 4MP, 8MP)', vi2:'HD analog and hybrid systems', vi3:'Remote monitoring via smartphone', vi4:'Multi-channel NVR / DVR recorders', vi5:'PTZ and motorized dome cameras', vi6:'System maintenance and management',
+    accTitle:'Access Control', accDesc:'Biometric and electronic solutions to manage and secure access to your premises.',
+    ac1:'Biometric readers (fingerprint, face)', ac2:'Badge and RFID card systems', ac3:'Keypads and video intercoms', ac4:'Staff access and schedule management', ac5:'Securing sensitive areas', ac6:'HR system integration',
+    netTitle:'Networks & Electrical', netDesc:'Professional network and electrical infrastructure to support your security systems and operations.',
+    ne1:'Cat6 structured cabling / fiber optics', ne2:'Computer network installation', ne3:'Patch panels and managed switches', ne4:'High and low voltage electrical works', ne5:'Backed power supply (UPS)', ne6:'Preventive technical maintenance',
+    realTag:'Our Projects', realTitle:'Recent projects<br>& achievements',
+    cat1:'Fire Safety', cat2:'Video Surveillance', cat3:'Access Control',
+    proj1Title:'Food Factory — Kebili', proj1Desc:'Full addressable fire detection system, 24 smoke detectors, fire control panel and 18 certified CO₂ extinguishers.',
+    proj2Title:'Office Building — Kebili', proj2Desc:'16 HD IP cameras, 24-channel NVR recorder, real-time mobile access and structured cabling across 4 floors.',
+    proj3Title:'Shopping Centre — Kebili', proj3Desc:'Biometric access control system (fingerprint + RFID badge), 3 entrance management, staff time tracking and restricted area security.',
+    ctaTitle:'Ready to secure your site?', ctaSub:'Contact us for a tailored assessment and free quote. Our experts travel anywhere in Tunisia.',
+    ctaBtn1:'Request a Free Quote', ctaBtn2:'Call Now',
+    contactTag:'Contact Us', contactTitle:'Tell us about<br>your project', contactCoords:'Our Contact Details',
+    labelPhone:'Phone', labelAddr:'Address', labelHours:'Hours', addrVal:'Kebili, Tunisia', hoursVal:'Mon – Fri: 8:00am – 6:00pm<br>Sat: 9:00am – 1:00pm', hoursShort:'Mon–Fri 8am–6pm',
+    formTitle:'Request a Free Quote', formName:'Full Name *', formNamePh:'Your name', formCompany:'Company', formCompanyPh:'Your company name', formPhone:'Phone *', formService:'Service needed', formServiceDefault:'-- Select a service --', formMsg:'Message', formMsgPh:'Describe your project...', formBtn:'Send Request', formPrivacy:'Your data is confidential. Response within 24h.',
+    svcFire:'Fire Safety', svcVideo:'Video Surveillance', svcAccess:'Access Control', svcNet:'Networks & Electrical', svcFull:'Complete Solution',
+    footerDesc:'Tunisian expert in fire safety, video surveillance and access control. Your trusted partner for over 10 years.',
+    footerServices:'Services', footerLinks:'Quick Links', footerRights:'All rights reserved.', footerKeywords:'Fire Safety · Video Surveillance · Access Control – Tunisia',
+    formSuccess:'Request Sent!', formSuccessMsg:'Request sent! We\'ll get back to you within 24h.', formFallback:'Opening your email client...',
+    formValidation:'Please fill in the required fields (Name & Email).', formEmailError:'Invalid email address.', formFileError:'File too large (max 5 MB).',
+    formPdf:'Attached document (PDF, optional)', formPdfDrop:'Drop a PDF here or click to browse', formPdfHint:'PDF, DOC, DOCX — max 5 MB',
+  },
+  ar: {
+    logoSub:'الأمن والحماية', navAbout:'من نحن', navServices:'خدماتنا', navReal:'إنجازاتنا', navContact:'اتصل بنا', navQuote:'عرض مجاني', navQuoteMobile:'➤ طلب عرض سعر',
+    heroBadge:'معتمدون ومرخصون في تونس', heroTitle1:'أمنكم', heroTitle2:'أولويتنا.', heroSub:'حلول احترافية في الوقاية من الحريق، المراقبة بالكاميرات وأنظمة التحكم في الدخول — للمؤسسات والصناعات والشركات في تونس.',
+    heroCta1:'طلب عرض سعر', heroCta2:'خدماتنا', stat1:'مشروع منجز', stat2:'سنوات خبرة', stat3:'مطابقة للمعايير', stat4:'دعم على مدار الساعة',
+    cert1:'المعايير التونسية NT', cert2:'مرخص من وزارة الداخلية', cert3:'مطابق لمعايير NFPA', cert4:'أنظمة IP معتمدة', cert5:'خدمة ما بعد البيع مضمونة',
+    intro1Title:'كشف الحريق وإخماده', intro1Sub:'أنظمة معتمدة تُركَّب وفق المعايير التونسية والدولية.',
+    intro2Title:'المراقبة بالكاميرات IP', intro2Sub:'مراقبة عن بُعد على مدار الساعة بكاميرات عالية الدقة لجميع أنواع المواقع.',
+    intro3Title:'التحكم في الدخول', intro3Sub:'بصمة، بطاقات وأكواد رقمية — حماية مناطقكم الحساسة بفعالية.',
+    aboutTag:'من نحن', aboutTitle:'MHD Protecta،<br>شريككم<br>الموثوق', aboutBadge:'خبير في الأمن', aboutCard:'سنوات خبرة<br>في تونس',
+    aboutP1:'<strong>MHD Protecta</strong> شركة تونسية متخصصة في تصميم وتركيب وصيانة أنظمة الأمن والسلامة على امتداد كامل التراب التونسي.',
+    aboutP2:'مهمتنا: <strong>حماية الأشخاص والممتلكات</strong> من خلال حلول موثوقة ومعتمدة ومطابقة للتشريعات التونسية.',
+    val1:'موثوقية معتمدة', val2:'تدخل سريع', val3:'مطابقة للمعايير', val4:'خدمة ما بعد البيع', val5:'معدات معتمدة', val6:'تغطية وطنية',
+    servicesTag:'خبراتنا', servicesTitle:'حلول أمنية<br>متكاملة', servicesSub:'من التدقيق إلى الصيانة، يرافقكم فريق MHD Protecta في كل مراحل مشروعكم.',
+    fireTag:'الخدمة الرئيسية', fireTitle:'الوقاية من الحريق', fireTitle2:'الوقاية من الحريق', fireBadge:'خدمتنا المحورية', fireDesc:'حل شامل للوقاية من الحريق وفق المعيار التونسي NT 52-31 والمعيار الدولي NFPA، من الدراسة إلى الصيانة الدورية.',
+    fi1:'دراسة وهندسة أنظمة كشف الحريق', fi2:'تركيب منبهات الحريق (عنوانية واتفاقية)', fi3:'بيع وتركيب وإعادة شحن طفايات الحريق', fi4:'أنظمة رشاشات الإخماد التلقائي', fi5:'خطط الإخلاء ولوحات السلامة', fi6:'الصيانة الدورية والمراجعة التنظيمية', fi7:'تدريب الموظفين على الإسعافات الأولية', fi8:'المطابقة الكاملة للمعايير التونسية المعمول بها',
+    vidTitle:'المراقبة بالكاميرات', vidDesc:'أنظمة مراقبة عالية الأداء تُلائم جميع أنواع المواقع المهنية والتجارية والصناعية.',
+    vi1:'كاميرات IP عالية الدقة (2MP, 4MP, 8MP)', vi2:'أنظمة تناظرية وهجينة HD', vi3:'مراقبة عن بُعد عبر الهاتف الذكي', vi4:'مسجلات NVR / DVR متعددة القنوات', vi5:'كاميرات PTZ والقباب المتحركة', vi6:'صيانة وإدارة الأنظمة',
+    accTitle:'التحكم في الدخول', accDesc:'حلول بيومترية وإلكترونية لإدارة وتأمين الدخول إلى مقراتكم.',
+    ac1:'أجهزة قراءة بيومترية (بصمة، وجه)', ac2:'أنظمة بطاقات RFID', ac3:'أكواد رقمية وبوابات إنترفون', ac4:'إدارة دخول الموظفين وأوقات العمل', ac5:'تأمين المناطق الحساسة', ac6:'التكامل مع أنظمة الموارد البشرية',
+    netTitle:'الشبكات والكهرباء', netDesc:'بنية تحتية شبكية وكهربائية احترافية لدعم أنظمة الأمن ونشاطكم.',
+    ne1:'تمديدات Cat6 والألياف الضوئية', ne2:'تركيب شبكات المعلوماتية', ne3:'خزائن التوزيع والمحولات المُدارة', ne4:'الأعمال الكهربائية التيار القوي والضعيف', ne5:'التغذية الاحتياطية (UPS)', ne6:'الصيانة التقنية الوقائية',
+    realTag:'مشاريعنا', realTitle:'إنجازات<br>ومشاريع حديثة',
+    cat1:'الوقاية من الحريق', cat2:'المراقبة بالكاميرات', cat3:'التحكم في الدخول',
+    proj1Title:'مصنع غذائي — قبلي', proj1Desc:'تركيب نظام كشف حريق عنواني، 24 كاشف دخان، لوحة تحكم مركزية و18 طفاية CO₂ معتمدة.',
+    proj2Title:'مبنى مكاتب — قبلي', proj2Desc:'تركيب 16 كاميرا IP عالية الدقة، مسجل NVR 24 قناة، مراقبة عن بُعد عبر الهاتف وتمديدات شبكية على 4 طوابق.',
+    proj3Title:'مركز تجاري — قبلي', proj3Desc:'نظام تحكم بيومتري في الدخول (بصمة + بطاقة RFID)، إدارة 3 مداخل، جهاز تتبع الحضور وتأمين المناطق المحظورة.',
+    ctaTitle:'هل أنتم مستعدون لتأمين موقعكم؟', ctaSub:'تواصلوا معنا للحصول على دراسة مخصصة وعرض سعر مجاني. خبراؤنا يتنقلون عبر كامل التراب التونسي.',
+    ctaBtn1:'طلب عرض سعر مجاني', ctaBtn2:'اتصلوا الآن',
+    contactTag:'اتصلوا بنا', contactTitle:'أخبرونا عن<br>مشروعكم', contactCoords:'معلومات الاتصال',
+    labelPhone:'الهاتف', labelAddr:'العنوان', labelHours:'أوقات العمل', addrVal:'قبلي، تونس', hoursVal:'الإثنين – الجمعة: 8:00 – 18:00<br>السبت: 9:00 – 13:00', hoursShort:'الإثنين–الجمعة 8ص–6م',
+    formTitle:'طلب عرض سعر مجاني', formName:'الاسم الكامل *', formNamePh:'اسمكم', formCompany:'الشركة', formCompanyPh:'اسم شركتكم', formPhone:'الهاتف *', formService:'الخدمة المطلوبة', formServiceDefault:'-- اختر خدمة --', formMsg:'الرسالة', formMsgPh:'صفوا مشروعكم...', formBtn:'إرسال الطلب', formPrivacy:'معلوماتكم سرية. نرد خلال 24 ساعة.',
+    svcFire:'الوقاية من الحريق', svcVideo:'المراقبة بالكاميرات', svcAccess:'التحكم في الدخول', svcNet:'الشبكات والكهرباء', svcFull:'حل متكامل',
+    footerDesc:'خبير تونسي في الوقاية من الحريق، المراقبة والتحكم في الدخول. شريككم الموثوق منذ أكثر من 10 سنوات.',
+    footerServices:'الخدمات', footerLinks:'روابط سريعة', footerRights:'جميع الحقوق محفوظة.', footerKeywords:'الوقاية من الحريق · المراقبة · التحكم في الدخول – تونس',
+    formSuccess:'تم إرسال طلبكم!', formSuccessMsg:'تم الإرسال! سنتواصل معكم خلال 24 ساعة.', formFallback:'فتح تطبيق البريد الإلكتروني...',
+    formValidation:'يرجى ملء الحقول الإلزامية (الاسم والبريد الإلكتروني).', formEmailError:'عنوان البريد الإلكتروني غير صحيح.', formFileError:'الملف كبير جداً (الحد الأقصى 5 ميغابايت).',
+    formPdf:'مستند مرفق (PDF، اختياري)', formPdfDrop:'اسحب ملف PDF هنا أو انقر للاختيار', formPdfHint:'PDF, DOC, DOCX — الحد الأقصى 5 MB',
+  }
+};
+
+let currentLang = 'fr';
+
+function setLang(lang) {
+  currentLang = lang;
+  const html = document.documentElement;
+  html.setAttribute('lang', lang);
+  html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+  // Update active button (all .lang-btn elements)
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll(`.lang-btn[onclick*="setLang('${lang}')"]`).forEach(b => b.classList.add('active'));
+
+  const t = T[lang];
+
+  // Update all [data-i18n] elements
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.innerHTML = t[key];
+  });
+
+  // Update placeholders
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const key = el.getAttribute('data-i18n-ph');
+    if (t[key] !== undefined) el.setAttribute('placeholder', t[key]);
+  });
+
+  // Update select options
+  const sel = document.getElementById('serviceSelect');
+  if (sel) {
+    const opts = sel.querySelectorAll('option[data-i18n]');
+    opts.forEach(o => {
+      const key = o.getAttribute('data-i18n');
+      if (t[key]) o.textContent = t[key];
+    });
+  }
+}
+
+// Smooth scroll
+document.addEventListener('click', function(e){
+  const a = e.target.closest('a[href^="#"]');
+  if(!a) return;
+  const href = a.getAttribute('href');
+  if(!href || href==='#') return;
+  e.preventDefault();
+  const el = document.querySelector(href);
+  if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+});
+
+function toggleMenu(){
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+
+window.addEventListener('scroll',()=>{
+  document.getElementById('navbar').style.boxShadow = window.scrollY>20 ? '0 4px 30px rgba(0,0,0,.3)' : 'none';
+});
+
+const obs = new IntersectionObserver(e=>{
+  e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);}});
+},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+
+function handleSubmit(e){
+  e.preventDefault();
+  const btn = e.target;
+  const t = T[currentLang];
+
+  // Gather values
+  const name    = document.getElementById('fName').value.trim();
+  const email   = document.getElementById('fEmail').value.trim();
+  const company = document.getElementById('fCompany').value.trim();
+  const phone   = document.getElementById('fPhone').value.trim();
+  const service = document.getElementById('serviceSelect').value;
+  const msg     = document.getElementById('fMsg').value.trim();
+  const fileInput = document.getElementById('pdfFile');
+  const file    = fileInput.files[0];
+
+  // Basic validation
+  if(!name || !email){
+    showToast('⚠️ ' + (t.formValidation || 'Veuillez remplir les champs obligatoires.'), 'error');
+    return;
+  }
+  const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if(!emailRe.test(email)){
+    showToast('⚠️ ' + (t.formEmailError || 'Adresse email invalide.'), 'error');
+    return;
+  }
+  if(file && file.size > 5*1024*1024){
+    showToast('⚠️ ' + (t.formFileError || 'Fichier trop grand (max 5 MB).'), 'error');
+    return;
+  }
+
+  // Loading state
+  const originalHTML = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> Envoi en cours...`;
+  btn.style.opacity = '0.8';
+
+  // Build template params
+  const params = {
+    to_email: 'saber.mekki6@gmail.com',
+    from_name: name,
+    from_email: email,
+    company: company || '—',
+    phone: phone || '—',
+    service: service || '—',
+    message: msg || '—',
+    language: currentLang.toUpperCase(),
+    has_file: file ? `Oui — ${file.name} (${(file.size/1024).toFixed(0)} KB)` : 'Non',
+    reply_to: email,
+  };
+
+  // If file: convert to base64 and include
+  function sendEmail(extraParams = {}) {
+    // Use EmailJS send — replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID'
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {...params, ...extraParams})
+      .then(() => {
+        btn.disabled = false;
+        btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> ${t.formSuccess}`;
+        btn.style.background = '#1A7A4A';
+        btn.style.opacity = '1';
+        showToast('✅ ' + (t.formSuccessMsg || t.formSuccess + ' — Nous vous répondrons sous 24h.'), 'success');
+        // Reset form
+        setTimeout(() => {
+          document.getElementById('fName').value = '';
+          document.getElementById('fEmail').value = '';
+          document.getElementById('fCompany').value = '';
+          document.getElementById('fPhone').value = '';
+          document.getElementById('serviceSelect').value = '';
+          document.getElementById('fMsg').value = '';
+          removeFile();
+          btn.innerHTML = originalHTML;
+          btn.style.background = '';
+        }, 3000);
+      })
+      .catch((err) => {
+        console.error('EmailJS error:', err);
+        btn.disabled = false;
+        btn.innerHTML = originalHTML;
+        btn.style.opacity = '1';
+        // Fallback: open mailto
+        const subject = encodeURIComponent(`[MHD Protecta] Demande de devis — ${name}`);
+        const body = encodeURIComponent(
+          `Nom: ${name}\nSociété: ${company}\nEmail: ${email}\nTél: ${phone}\nService: ${service}\n\nMessage:\n${msg}\n\nFichier joint: ${params.has_file}`
+        );
+        window.location.href = `mailto:saber.mekki6@gmail.com?subject=${subject}&body=${body}`;
+        showToast('📧 ' + (t.formFallback || 'Ouverture de votre client email...'), 'success');
+      });
+  }
+
+  if(file) {
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      sendEmail({ file_content: ev.target.result, file_name: file.name });
+    };
+    reader.readAsDataURL(file);
+  } else {
+    sendEmail();
+  }
+}
+
+// ── FILE UPLOAD HANDLERS ──
+function handleFile(input) {
+  const file = input.files[0];
+  if(!file) return;
+  if(file.size > 5*1024*1024){
+    showToast('⚠️ Fichier trop grand (max 5 MB)', 'error');
+    input.value = '';
+    return;
+  }
+  document.getElementById('fileName').textContent = file.name;
+  document.getElementById('fileSize').textContent = '(' + (file.size/1024).toFixed(0) + ' KB)';
+  document.getElementById('filePreview').classList.add('show');
+  document.getElementById('uploadZone').style.borderColor = 'var(--navy)';
+  document.getElementById('uploadZone').style.background = '#f0f4f8';
+}
+
+function removeFile() {
+  document.getElementById('pdfFile').value = '';
+  document.getElementById('filePreview').classList.remove('show');
+  document.getElementById('uploadZone').style.borderColor = '';
+  document.getElementById('uploadZone').style.background = '';
+}
+
+// Drag & drop
+const zone = document.getElementById('uploadZone');
+if(zone) {
+  zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('dragover'); });
+  zone.addEventListener('dragleave', () => zone.classList.remove('dragover'));
+  zone.addEventListener('drop', e => {
+    e.preventDefault();
+    zone.classList.remove('dragover');
+    const dt = e.dataTransfer;
+    if(dt.files.length) {
+      document.getElementById('pdfFile').files = dt.files;
+      handleFile(document.getElementById('pdfFile'));
+    }
+  });
+}
+
+// ── TOAST ──
+function showToast(msg, type='success'){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = `toast ${type}`;
+  setTimeout(() => t.classList.add('show'), 10);
+  setTimeout(() => t.classList.remove('show'), 4500);
+}
+
+// Spin animation for loading
+const style = document.createElement('style');
+style.textContent = '@keyframes spin{to{transform:rotate(360deg)}}';
+document.head.appendChild(style);
+</script>
+</body>
+</html>
